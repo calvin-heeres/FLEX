@@ -42,30 +42,30 @@ actionSpeech = (speechText) => {
   console.log(speechText); // debug 
   switch(speechText){ 
     // switch evaluates using stric comparison, ===
-    case "black":
+    case "zwart":
       document.body.style.background = "#000000";
       document.body.style.color="#FFFFFF";
       break;
-    case  "reset":
+    case  "herstel":
       document.body.style.background = "#ffe6ab";
       document.body.style.color="#000000";
       image1.classList.add("hide"); // hide image (if any)
       break;
-    case "next page":
+    case "Volgende pagina":
       window.open("https://www.ma-web.nl/", "_self");
       break;
     case "help me":
-      alert("Valid speech commands: Calvin, Oculus, Quest 2, reset, next page");
+      alert("Valid speech commands: zwart, calvin, oculus, quest, herstel, Volgende pagina");
       break;
-    case "Calvin":
+    case "kelvin":
       window.open("https://www.linkedin.com/in/calvin-heeres-797951240/", "_self");
       break;
-    case "Oculus":
+    case "oculus":
       window.open("https://store.facebook.com/nl/quest/products/quest-2/", "_self");
       break;
     case "image": // let op, "fall-through"
-    case "Quest 2": // let op, "fall-through"
-      image1.src = "./img/Wuest.webp";
+    case "quest": // let op, "fall-through"
+      image1.src = "./img/Quest.webp";
       image1.classList.remove("hide") // show image
       break;
     default:
