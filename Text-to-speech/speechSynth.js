@@ -4,11 +4,15 @@ let play = document.querySelector('#play');
 let play2 = document.querySelector('#play2');
 let play3 = document.querySelector('#play3');
 let play4 = document.querySelector('#play4');
+let play5 = document.querySelector('#play5');
+
 
 play.addEventListener('click', () => {sayTheWord(inputTxt.value);});
 play2.addEventListener('click', () => {sayTheWord(textData.welcomeEn());});
 play3.addEventListener('click', () => {sayTheWord(textData.dateStringEnglish());});
 play4.addEventListener('click', () => { sayTheWord(textArray[3]); });
+play5.addEventListener('click', () => {sayTheWord(textData.Bierkopen());});
+
  
 let synthesizer =  window.speechSynthesis; // init speech synthesizer
 let magicVoice = new SpeechSynthesisUtterance(); // instance of speech to text
@@ -48,8 +52,12 @@ class TextData{
         let textString = ("Welcome to my shop! How can I help you");
         return textString;
     }
-    welcomeDu(){
+    welcomeNl(){
         let textString = ("Welkom bij mijn webwinkel. Hoe kan ik jou helpen");
+        return textString;
+    }
+    Bierkopen(){
+        let textString = ("Wilt u kratje pils bestellen?");
         return textString;
     }
 }
